@@ -1,8 +1,9 @@
 /*
- * @(#)Computer.java        0.6 2019/12/03
+ * @(#)Computer.java        0.7 2019.12.13
  *
  * Copyright (c) 2019 lxxjn0.
  */
+
 package com.lxxjn0.baseball;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.Random;
  * 1부터 9까지 서로 다른 수로 이루어진 3자리 수를 생성하는 클래스.
  *
  * @author JUNYOUNG LEE (lxxjn0)
- * @version 0.6 2019/12/03
+ * @version 0.7 2019.12.13
  */
 public class Computer {
     /**
@@ -31,23 +32,10 @@ public class Computer {
     private static final int MAX_NUM = 9;
 
     /**
-     * 생성하는 숫자를 저장할 ArrayList
-     */
-    private ArrayList<Integer> generatedNumber;
-
-    /**
-     * Computer 클래스의 생성자.
-     * 1부터 9까지 서로 다른 수로 이루어진 3자리 수를 저장.
-     */
-    public Computer() {
-        generateRandomNumber();
-    }
-
-    /**
      * 1부터 9까지 서로 다른 수로 이루어진 3자리 수를 생성하는 메서드.
      */
-    private void generateRandomNumber() {
-        generatedNumber = new ArrayList<>();
+    public ArrayList<Integer> generateRandomNumber() {
+        ArrayList<Integer>generatedNumber = new ArrayList<>();
 
         while (generatedNumber.size() < NUM_LEN_TO_GENERATE) {
             int tmp = new Random().nextInt(MAX_NUM) + MIN_NUM;
@@ -55,14 +43,6 @@ public class Computer {
                 generatedNumber.add(tmp);
             }
         }
-    }
-
-    /**
-     * generatedNumber getter
-     *
-     * @return 조건에 맞게 생성된 3자리 수 generatedNumber 반환
-     */
-    public ArrayList<Integer> getGeneratedNumber() {
-        return generatedNumber;
+        return  generatedNumber;
     }
 }

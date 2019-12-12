@@ -1,8 +1,9 @@
 /*
- * @(#)Referee.java        0.8 2019/12/03
+ * @(#)Referee.java        0.9 2019.12.13
  *
  * Copyright (c) 2019 lxxjn0.
  */
+
 package com.lxxjn0.baseball;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  * 스트라이크와 볼의 개수를 확인하고 낫싱 여부를 판단하는 클래스.
  *
  * @author JUNYOUNG LEE (lxxjn0)
- * @version 0.8 2019/12/03
+ * @version 0.9 2019.12.13
  */
 public class Referee {
     /**
@@ -51,8 +52,7 @@ public class Referee {
      * @param generatedNumber 컴퓨터가 생성한 3자리 수
      * @param enteredNumber   사용자가 입력한 3자리 수
      */
-    public Referee(ArrayList<Integer> generatedNumber,
-                   ArrayList<Integer> enteredNumber) {
+    public Referee(ArrayList<Integer> generatedNumber, ArrayList<Integer> enteredNumber) {
         this.generatedNumber = generatedNumber;
         this.enteredNumber = enteredNumber;
 
