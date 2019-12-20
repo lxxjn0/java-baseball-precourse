@@ -1,5 +1,5 @@
 /*
- * @(#)Input.java       0.1 2019.12.12
+ * @(#)Input.java       0.2 2019.12.20
  *
  * Copyright (c) 2019 lxxjn0.
  */
@@ -12,33 +12,22 @@ import java.util.Scanner;
  * 프로그램에서 입력과 관련된 모든 기능을 담당하는 클래스(UI 로직).
  *
  * @author JUNYOUNG LEE (lxxjn0)
- * @version 0.1 2019.12.12
+ * @version 0.2 2019.12.20
  */
 public class Input {
-    /**
-     * 사용자로부터 입력을 받아올 scanner 객체.
-     */
-    private Scanner scanner;
+    private static Scanner scanner;
 
-    /**
-     * 숫자를 입력하라는 요청에 대한 사용자의 입력을 받는 메소드.
-     *
-     * @return 사용자로부터 받은 입력을 반환.
-     */
-    public String receiveNumberInput() {
+    public static String receiveNumberInput() {
         scanner = new Scanner(System.in);
 
+        Output.printRequestNumberInput();
         return scanner.nextLine();
     }
 
-    /**
-     * 게임 재시작 여부를 입력하라는 요청에 대한 사용자의 입력을 받는 메소드.
-     *
-     * @return 사용자로부터 받은 입력(숫자)을 반환.
-     */
-    public int receiveRestartInput() {
+    public static String receiveResumeInput() {
         scanner = new Scanner(System.in);
 
-        return scanner.nextInt();
+        Output.printRequestResumeInput();
+        return scanner.nextLine();
     }
 }
